@@ -17,14 +17,24 @@ img {
   max-width: 100%;
 }
 
-.switcher-button {
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+  gap: 40px 20px;
+}
+
+.button {
   padding: 20px 25px;
-  margin:0 20px;
+  margin: 0 20px;
   position: relative;
   top: 0;
   display: inline-block;
   border: 1px solid #387796;
-  background: #51A3B8;
+  background: #51a3b8;
   font-size: 20px;
   color: white;
   border-radius: 7px;
@@ -33,14 +43,62 @@ img {
   cursor: pointer;
 }
 
-.switcher-button:active {
+.button:active {
   top: 3px;
   box-shadow: 0 0 #387796;
   transition: all 200ms linear;
 }
 
-.switcher-button:disabled {
+.button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
+.timer-input {
+  padding: 20px 25px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 7px;
+  border: 1px solid #387796;
+}
+.timer,
+.field,
+.form,
+.form-label{
+  display: flex;
+  gap: 12px;
+}
+
+.timer {
+  grid-area: 2 / 1 / 3 / 3;
+  justify-content: space-evenly;
+}
+
+.field {
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.value {
+  font-size: 80px;
+  font-weight: 700;
+  color: #0d3967;
+  text-shadow:
+    #cad5e2 1px 1px 0,
+    #cad5e2 2px 2px 0,
+    #cad5e2 3px 3px 0,
+    #cad5e2 4px 4px 0,
+    #cad5e2 5px 5px 0;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.form-label{
+  flex-direction: column;
+  max-width: 20%;
+}
