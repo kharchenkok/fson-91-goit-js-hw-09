@@ -16,3 +16,31 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.switcher-button {
+  padding: 20px 25px;
+  margin:0 20px;
+  position: relative;
+  top: 0;
+  display: inline-block;
+  border: 1px solid #387796;
+  background: #51A3B8;
+  font-size: 20px;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 3px 3px #387796;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+.switcher-button:active {
+  top: 3px;
+  box-shadow: 0 0 #387796;
+  transition: all 200ms linear;
+}
+
+.switcher-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
